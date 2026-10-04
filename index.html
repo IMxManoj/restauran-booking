@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bobbys Kitchen | Restaurant Booking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="nav container">
+
+        <a href="#" class="logo">
+            <span>✦</span> BOBBY'S KITCHEN
+        </a>
+
+        <nav class="nav-links">
+            <a href="#restaurants">Restaurants</a>
+            <a href="#how">How it works</a>
+            <a href="#bookings">My bookings</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="#restaurants" class="saved-link" id="savedLink">♡ Saved</a>
+
+            <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">
+                ☾
+            </button>
+
+            <button id="loginBtn" class="avatar">
+                MB
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                QUALITY FOOD. GREAT TABLES.
+            </div>
+
+            <h1>
+                Find a table 
+                <br>
+                <em>worth remembering.</em>
+            </h1>
+
+            <p>
+                Discover standout restaurants across Mumbai and Thane, see real-time style availability,
+                and reserve a table in seconds — no payment required.
+            </p>
+
+            <div class="hero-proof">
+                <span>★ 4.8 average guest rating</span>
+                <span>·</span>
+                <span>22 restaurants</span>
+                <span>·</span>
+                <span>Instant confirmation</span>
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-box">
+
+            <div class="search-field">
+
+                <span>⌕</span>
+
+                <div>
+                    <label>Restaurant or cuisine</label>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Try Italian, Indian..."
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="search-field">
+
+                <span>⌖</span>
+
+                <div>
+                    <label>Location</label>
+
+                    <input
+                        type="text"
+                        id="locationInput"
+                        value="Mumbai"
+                        placeholder="Mumbai or Bandra..."
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="search-field">
+
+                <span>◷</span>
+
+                <div>
+                    <label>Date</label>
+
+                    <input
+                        type="date"
+                        id="searchDate"
+                    >
+                </div>
+
+            </div>
+
+
+            <button id="searchBtn" class="search-btn">
+                Find tables
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESTAURANTS ================= -->
+
+<section class="section container" id="restaurants">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                CURATED FOR YOU
+            </div>
+
+            <h2>
+                Popular restaurants
+            </h2>
+
+        </div>
+
+        <div class="results-tools">
+            <span id="resultsCount" class="results-count"></span>
+            <label class="sort-control">
+                Sort by
+                <select id="sortSelect">
+                    <option value="recommended">Recommended</option>
+                    <option value="rating">Top rated</option>
+                    <option value="price-low">Price: low to high</option>
+                    <option value="price-high">Price: high to low</option>
+                    <option value="reviews">Most reviewed</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active" data-filter="All">
+                All
+            </button>
+
+            <button class="filter" data-filter="Italian">
+                Italian
+            </button>
+
+            <button class="filter" data-filter="Indian">
+                Indian
+            </button>
+
+            <button class="filter" data-filter="Asian">
+                Asian
+            </button>
+
+            <button class="filter" data-filter="Cafe">
+                Cafe
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="restaurantGrid" class="restaurant-grid">
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-section" id="how">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            SIMPLE BY DESIGN
+        </div>
+
+        <h2>
+            Book in three easy steps
+        </h2>
+
+        <p class="section-intro">From discovery to confirmation, every step is designed to feel like a real reservation service.</p>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <span class="step-number">
+                    01
+                </span>
+
+                <div class="step-icon">
+                    ⌕
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+                    Search by cuisine, restaurant or location.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <span class="step-number">
+                    02
+                </span>
+
+                <div class="step-icon">
+                    ◷
+                </div>
+
+                <h3>
+                    Choose a time
+                </h3>
+
+                <p>
+                    Select your date, guests and available slot.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <span class="step-number">
+                    03
+                </span>
+
+                <div class="step-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Enjoy
+                </h3>
+
+                <p>
+                    Get your confirmation and enjoy your meal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKINGS ================= -->
+
+<section class="section container bookings-section" id="bookings">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                YOUR RESERVATIONS
+            </div>
+
+            <h2>
+                My bookings
+            </h2>
+
+        </div>
+
+        <span id="bookingCount" class="booking-count">
+        </span>
+
+    </div>
+
+
+    <div id="bookingList">
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <strong>
+            ✦ Tablely
+        </strong>
+
+        <span>
+            Restaurant reservations, beautifully simple.
+        </span>
+
+        <span>
+            © 2026 Tablely
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= BOOKING MODAL ================= -->
+
+<div id="modal" class="modal hidden">
+
+    <div class="modal-card">
+
+        <button id="closeModal" class="close-btn">
+            ×
+        </button>
+
+        <div id="modalContent">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast" class="toast">
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
